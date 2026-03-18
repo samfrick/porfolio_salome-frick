@@ -13,9 +13,9 @@ const projects = ref([
     },
     {
         title: 'Vers un ciel plus vert',
-        description: 'A nouveau dans le cadre d\'une SAE de groupe sur le thème de la ssobriété énergétique, nous avons du réaliser un site infogrphique sur le thème de notre choix. \
-                        Avec mon groupe, nous avons choisi la consommation énergétique des avions. Chacun de nous a du faire des recherches de données quant au thème. \
-                        Pour ma part, j\'ai choisi la part de carburant consommée dans les courts courriers. J\'ai ensuite pris en charge une grande partie de l\'itégration du site.',
+        description: 'A nouveau dans le cadre d\'une SAE de groupe sur le thème de la sobriété énergétique, nous avons dû réaliser un site infographique sur le thème de notre choix. \
+                        Avec mon groupe, nous avons choisi la consommation énergétique des avions. Chacun de nous a dû faire des recherches de données quant au thème. \
+                        Pour ma part, j\'ai choisi la part de carburant consommée par les courts courriers. J\'ai ensuite pris en charge une grande partie de l\'intégration du site.',
         date: '2025',
         link: '',
         image: '/images/ciel-vert.png'
@@ -23,7 +23,7 @@ const projects = ref([
     {
         title: 'L\'Europe sur la défensive',
         description: 'Ce projet de conception UX et développement web a été réalisé dans le cadre d\'une SAE en partenariat avec le Centre Universitaire d\'École de Journalisme (CUEJ) de Strasbourg. \
-                        L\'objectif était de réaliser un CMS à l\'aide de Laravel afin que les élèves du CUEJ puissent publier des articles. \
+                        L\'objectif était de réaliser un CMS à l\'aide de Laravel, afin que les élèves du CUEJ puissent publier des articles. \
                         J\'y ai réalisé les maquettes graphiques, le CMS (principalement la partie visible), ainsi que l\'affichage de quelques composants des articles.',
         date: '2024',
         link: 'https://cuej.info/mini-sites/europe2024/',
@@ -31,7 +31,7 @@ const projects = ref([
     },
     {
         title: 'Refonte du site de la Sig Association',
-        description: 'L\'objectif de cette SAE d\'UX et de webdesign était de réaliser, en groupe, la refonte du site internet de la Sig Association, club de basket féminin basé à Strasbourg Illkirch-Graffenstaden. \
+        description: 'L\'objectif de cette SAE d\'UX et de webdesign était de réaliser, en groupe, la refonte du site internet de la Sig Association, club de basket féminin basé à Illkirch-Graffenstaden. \
                      Pour ma part, j\'ai pu réaliser la charte graphique ainsi que les  wireframes du site sur Figma. Nous avons ensuite fait le webdesign, en s\'appuyant sur la charte graphique. ',
         date: '2024',
         link: 'https://embed.figma.com/proto/5hAScV70jQQf9SLKu0Ocsb/SA%C3%89-302?page-id=1%3A4&node-id=278-2218&viewport=1450%2C367%2C0.08&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=278%3A2218&embed-host=share',
