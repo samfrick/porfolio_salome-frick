@@ -43,16 +43,16 @@ const projects = ref([
 <template>
     <section class="w-full h-full flex flex-col justify-center items-center">
         <UPageHero title="Mes projets" :description="projectDesc" orientation="horizontal" reverse :ui="{
-            container: 'py-10 lg:py-32 lg:flex lg:flex-row gap-10 md:gap-auto',
+            container: 'py-10 lg:py-32 lg:flex lg:flex-row gap-10 md:gap-auto mb-10 lg:mb-0',
         }">
             <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
                 alt="fraise" class="rounded-full w-full sm:w-80 aspect-square object-cover">
         </UPageHero>
-        <div class="mx-5 md:mx-40 flex flex-col gap-10 md:gap-16">
+        <div class="mx-5 lg:mx-40 flex flex-col gap-10 sm:gap-16">
             <UPageCard v-for="(project, index) in projects" :key="index" :title="project.title"
                 :description="project.description" :to="project.link" orientation="horizontal" variant="naked"
                 :reverse="index % 2 === 1" target="_blank" class="group" :ui="{
-                    container: 'lg:flex lg:flex-row gap-x-12',
+                    container: 'md:flex md:flex-row lg:flex lg:flex-row gap-x-12',
                     wrapper: 'max-sm:order-last'
                 }">
                 <template #leading>
