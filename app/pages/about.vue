@@ -13,7 +13,7 @@ const itemsSchool = ref<TimelineItem[]>([
         icon: 'i-lucide-laptop'
     },
     {
-        date: 'Septembre 2020 - Juin 2023',
+        date: 'Juin 2023',
         title: 'Baccalauréat général - Mention Bien',
         description: 'Lycée Fustel de Coulanges, Strasbourg - Spécialités : Mathématiques & Physique-Chimie',
         icon: 'i-lucide-school'
@@ -21,7 +21,7 @@ const itemsSchool = ref<TimelineItem[]>([
     {
         date: '2013 - 2024',
         title: 'Diplôme du COA (cycle orientation amateur)',
-        description: 'Cité de la Musique et de la Danse, Strasbourg - Cursus : Saxophone',
+        description: 'Conservatoire de Strasbourg - Cursus : Saxophone',
         icon: 'i-lucide-piano'
     }
 ])
