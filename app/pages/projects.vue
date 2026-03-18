@@ -43,12 +43,12 @@ const projects = ref([
 <template>
     <section class="w-full h-full flex flex-col justify-center items-center">
         <UPageHero title="Mes projets" :description="projectDesc" orientation="horizontal" reverse :ui="{
-            container: 'lg:py-32 lg:flex lg:flex-row',
+            container: 'py-10 lg:py-32 lg:flex lg:flex-row gap-10 md:gap-auto',
         }">
             <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                alt="fraise" class="rounded-full w-80 aspect-square object-cover">
+                alt="fraise" class="rounded-full w-full sm:w-80 aspect-square object-cover">
         </UPageHero>
-        <div class="mx-40 flex flex-col gap-16">
+        <div class="mx-5 md:mx-40 flex flex-col gap-10 md:gap-16">
             <UPageCard v-for="(project, index) in projects" :key="index" :title="project.title"
                 :description="project.description" :to="project.link" orientation="horizontal" variant="naked"
                 :reverse="index % 2 === 1" target="_blank" class="group" :ui="{
@@ -61,10 +61,10 @@ const projects = ref([
                     </span>
                 </template>
                 <template #footer>
-                    <ULink :to="project.link" class="text-sm text-primary flex items-center">
+                    <ULink :to="project.link" class="text-sm text-primary flex items-center gap-2">
                         Voir le projet
                         <UIcon name="lucide:arrow-right"
-                            class="size-4 text-primary transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100" />
+                            class="size-4 text-primary lg:transition-all lg:opacity-0 lg:group-hover:translate-x-1 lg:group-hover:opacity-100" />
                     </ULink>
                 </template>
                 <img :src="project.image" :alt="project.title"
