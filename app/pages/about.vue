@@ -64,11 +64,12 @@ const itemsJob = ref<TimelineItem[]>([
 <template>
     <section class="w-full h-full">
         <UPageHero title="A propos de moi" :description="aboutMe" orientation="horizontal" :ui="{
-            container: 'lg:py-32 lg:flex lg:flex-row',
+            container: 'py-10 lg:py-32 lg:flex flex-col-reverse lg:flex-row',
         }">
-            <img src="/images/about-me.JPG" alt="about-me" class="rounded-full w-80 aspect-square object-cover">
+            <img src="/images/about-me.JPG" alt="about-me"
+                class="rounded-full w-full md:w-80 aspect-square object-cover">
         </UPageHero>
-        <div class="grid grid-cols-2 mx-40 gap-30">
+        <div class="grid md:grid-cols-2 mx-5 md:mx-40 gap-10 md:gap-30">
             <div class="flex flex-col gap-5">
                 <h2 class="text-3xl font-bold">Mes expériences pros et associatives</h2>
                 <UTimeline :items="itemsJob" />
