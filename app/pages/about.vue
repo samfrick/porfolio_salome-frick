@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { TimelineItem } from '@nuxt/ui'
 
-const aboutMe = 'Motivée, dynamique, curieuse et attentive, je suis actuellement étudiante en 3ème année de BUT Métiers du Multimédia et de l\'Internet, à l\'IUT de Haguenau (Bas-Rhin). \
-                Je suis actuellement alternante développeuse web front-end chez Logitud Solutions. \
+const aboutMe = 'Motivée, dynamique, curieuse, attentive et étudiante en 3ème année de BUT Métiers du Multimédia et de l\'Internet, à l\'IUT de Haguenau (Bas-Rhin), \
+                je suis actuellement alternante développeuse web front-end chez Logitud Solutions. \
                 J\'ai développé un sens de l\'écoute et un esprit créatif grâce à la musique (saxophone), que je pratique depuis plus de 14 ans.'
 
 const itemsSchool = ref<TimelineItem[]>([
