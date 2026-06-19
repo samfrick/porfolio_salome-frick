@@ -19,9 +19,15 @@ const links = ref<ButtonProps[]>([
 
 <template>
     <UPageHero title="Salomé Frick" description="Développeuse Web Front-End & UX Designer" :links="links" :ui="{
-        container: 'items-center lg:flex',
+        container: 'items-center lg:flex overflow-hidden',
         wrapper: 'flex flex-col items-center w-fit',
         footer: 'w-full',
+        title: 'sm:text-[5rem] md:text-[6rem] lg:text-[8rem] uppercase',
         links: 'w-full flex flex-col sm:flex-row'
-    }" />
+    }">
+        <p
+            class="absolute hidden sm:block sm:top-7 md:top-5 lg:top-0 xl:top-3 -z-10 text-center font-black uppercase text-neutral-100 dark:text-neutral-800 text-[18vw] leading-none">
+            Portfolio
+        </p>
+    </UPageHero>
 </template>
