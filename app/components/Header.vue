@@ -10,9 +10,14 @@ const items = <NavigationMenuItem[]>[
 
 <template>
     <UHeader title="" class="sticky">
-        <UNavigationMenu :items="items" color="neutral" />
+        <UNavigationMenu :items="items" color="neutral" :ui="{
+            link: 'text-md px-5',
+        }" />
         <template #body>
-            <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
+            <UNavigationMenu :items="items" orientation="vertical" color="neutral" class="-mx-2.5" :ui="{
+                list: 'flex flex-col gap-7',
+                link: 'justify-center text-xl py-5',
+            }" />
         </template>
         <template #right>
             <UColorModeButton />
