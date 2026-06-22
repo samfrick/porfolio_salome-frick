@@ -64,7 +64,7 @@ const itemsJob = ref<TimelineItem[]>([
 <template>
     <section class="w-full h-full">
         <p
-            class="fixed inset-0 hidden sm:block sm:top-7 md:top-5 lg:top-0 xl:top-3 -z-10 text-center font-black uppercase text-neutral-100 dark:text-neutral-800 text-[19vw] leading-none">
+            class="fixed inset-0 hidden sm:block sm:top-7 md:top-5 lg:top-0 xl:top-3 -z-10 text-center font-black uppercase text-neutral-100 dark:text-neutral-800 text-[19.5vw] leading-none">
             A propos
         </p>
         <UPageHero title="A propos de moi" :description="aboutMe" orientation="horizontal" :ui="{

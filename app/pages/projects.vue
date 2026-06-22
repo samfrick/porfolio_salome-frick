@@ -43,7 +43,7 @@ const projects = ref([
 <template>
     <section class="w-full h-full flex flex-col justify-center items-center">
         <p
-            class="fixed inset-0 hidden sm:block sm:top-7 md:top-5 lg:top-0 xl:top-3 -z-10 text-center font-black uppercase text-neutral-100 dark:text-neutral-800 text-[22vw] leading-none">
+            class="fixed inset-0 hidden sm:block sm:top-7 md:top-5 lg:top-0 xl:top-3 -z-10 text-center font-black uppercase text-neutral-100 dark:text-neutral-800 text-[23vw] leading-none">
             Projets
         </p>
         <UPageHero title="Mes projets" :description="projectDesc" orientation="horizontal" reverse :ui="{
