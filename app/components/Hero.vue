@@ -12,13 +12,13 @@ const links = ref<ButtonProps[]>([
         label: 'A propos de moi',
         to: '/about',
         color: 'neutral',
-        ui: { base: 'justify-center w-1/3 p-5 font-bold uppercase' }
+        ui: { base: 'justify-center w-full md:w-1/3 p-5 font-bold uppercase' }
     },
     {
         label: 'Mes projets',
         to: '/projects',
         color: 'neutral',
-        ui: { base: 'justify-center w-1/3 p-5 font-bold uppercase' }
+        ui: { base: 'justify-center w-full md:w-1/3 p-5 font-bold uppercase' }
     }
 ])
 </script>
@@ -30,11 +30,11 @@ const links = ref<ButtonProps[]>([
     </p>
     <UPageHero :title="hero.title" :description="hero.description" :links="links" :ui="{
         container: 'items-center lg:flex overflow-hidden',
-        wrapper: 'flex flex-col items-center',
-        header: 'w-full flex flex-col items-center',
+        wrapper: 'flex flex-col items-start md:items-center',
+        header: 'w-full flex flex-col text-left md:text-center items-start md:items-center',
         footer: 'w-full',
         title: 'sm:text-[5rem] md:text-[6rem] lg:text-[8rem] uppercase',
-        description: 'w-2/3',
+        description: 'w-full lg:w-2/3 text-md',
         links: 'w-full flex flex-col sm:flex-row'
     }">
     </UPageHero>
