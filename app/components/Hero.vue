@@ -1,9 +1,14 @@
 <script setup lang="ts">
-import type { ButtonProps } from '@nuxt/ui';
+import type { ButtonProps } from '@nuxt/ui'
 import { projects } from '~/data/projects'
+import { about } from '~/data/about'
 
 const featuredProjects = computed(() =>
     projects.filter(project => project.featured)
+)
+
+const featuredAbout = computed(() =>
+    about.filter(item => item.featured)
 )
 
 const hero = ref({
@@ -70,8 +75,8 @@ const linkProjects = ref<ButtonProps>({
         container: 'lg:py-0 mb-20',
     }">
         <UBlogPosts>
-            <UBlogPost v-for="project in featuredProjects" :key="project.title" :title="project.title"
-                :description="project.shortDescription" :image="project.image" :to="project.link" :ui="{
+            <UBlogPost v-for="project in featuredAbout" :key="project.title" :title="project.title"
+                :image="project.image" :ui="{
                     description: 'text-sm text-muted',
                 }" />
         </UBlogPosts>
