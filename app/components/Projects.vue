@@ -29,7 +29,9 @@ const filteredProjects = computed(() =>
 
 <template>
     <div class="mx-5 lg:mx-40 xl:w-300 flex flex-col gap-10 sm:gap-16">
-        <UTabs v-model="activeTab" :items="items" />
+        <UTabs v-model="activeTab" :items="items" :ui="{
+            trigger: 'cursor-pointer'
+        }" />
         <UPageCard v-for="(project, index) in filteredProjects" :key="index" :title="project.title"
             :description="project.description" :to="project.link" orientation="horizontal" variant="naked"
             :reverse="index % 2 === 1" target="_blank" class="group" :ui="{
@@ -45,7 +47,7 @@ const filteredProjects = computed(() =>
                 <div class="flex flex-col gap-1 mb-2">
                     <span>{{ project.title }}</span>
                     <div class="flex flex-row gap-1">
-                        <UBadge v-for="tech in project.technologies.slice(0, 3)" :key="tech" size="sm" variant="soft"
+                        <UBadge v-for="tech in project.technologies" :key="tech" size="sm" variant="soft"
                             class="w-fit flex">
                             {{ tech }}
                         </UBadge>

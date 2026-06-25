@@ -12,7 +12,7 @@ export const projects = [
         technologies: ['Nuxt', 'TS', 'Tailwind'],
         link: 'https://salomefrick.fr',
         github: 'https://github.com/samfrick/porfolio_salome-frick.git',
-        image: '/images/app-recettes.png',
+        image: '/images/portfolio.png',
         featured: true,
         category: 'dev'
     },
@@ -29,6 +29,19 @@ export const projects = [
         category: 'ux'
     },
     {
+        title: 'RIO',
+        description: 'Ce site a été réalisé dans le cadre de mon stage de 2ème année de BUT MMI, au sein de l\'agence de communication IZHAK Interact. \
+                        L\'objectif était de réaliser un site vitrine pour le client RIO, qui propose des solutions de mobilité électrique. \
+                        Le site a été réalisé sur WordPress, en créant un thème personnalisé et créant les différents composants. Tout cela en suivant une maquette Figma.',
+        shortDescription: 'Site web réalisé dans le cadre de mon stage de 2ème année de BUT MMI, au sein de l\'agence de communication IZHAK Interact.',
+        date: '2025',
+        technologies: ['Wordpress', 'HTML', 'CSS', 'JS'],
+        link: 'https://rio.demo-pixel.com/',
+        image: '/images/rio.png',
+        featured: false,
+        category: 'dev'
+    },
+    {
         title: 'Vers un ciel plus vert',
         description: 'A nouveau dans le cadre d\'une SAE de groupe sur le thème de la sobriété énergétique, nous avons dû réaliser un site infographique sur le thème de notre choix. \
                         Avec mon groupe, nous avons choisi la consommation énergétique des avions. Chacun de nous a dû faire des recherches de données quant au thème. \
@@ -40,6 +53,19 @@ export const projects = [
         image: '/images/ciel-vert.png',
         featured: true,
         category: 'dev'
+    },
+    {
+        title: 'La ferme Humbert',
+        description: 'L\'objectif de ce projet était de réaliser une refonte du site La Ferme Humbert. \
+                        J\'ai réalisé les maquettes graphiques sur Figma, en créant ma propre charte graphique.',
+        shortDescription: 'Site web réalisé en partenariat avec le Centre Universitaire d\'École de Journalisme de Strasbourg.',
+        date: '2024 - 2025',
+        technologies: ['Figma'],
+        link: 'https://www.figma.com/proto/Uxy7qoWBiX1kCNFqXbUemz/CREA3_gr1_FRICK_Salom%C3%A9?node-id=350-205&viewport=216%2C98%2C0.35&t=136RK0sv1ElFd8tS-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=350%3A205&page-id=268%3A258',
+        github: 'https://github.com/lePapeGrisous/CUEJ_nipssy.git',
+        image: '/images/ferme-humbert.png',
+        featured: true,
+        category: 'ux'
     },
     {
         title: 'L\'Europe sur la défensive',
