@@ -1,10 +1,36 @@
 <script setup lang="ts">
 import { projects } from '~/data/projects'
+
+const items = [
+    {
+        label: 'Tous les projets',
+        value: 'all'
+    },
+    {
+        label: 'Développement Web',
+        value: 'dev'
+    },
+    {
+        label: 'UX / UI',
+        value: 'ux'
+    }
+]
+
+const activeTab = ref('all')
+
+const filteredProjects = computed(() =>
+    activeTab.value === 'all'
+        ? projects
+        : projects.filter(
+            project => project.category === activeTab.value
+        )
+)
 </script>
 
 <template>
     <div class="mx-5 lg:mx-40 xl:w-300 flex flex-col gap-10 sm:gap-16">
-        <UPageCard v-for="(project, index) in projects" :key="index" :title="project.title"
+        <UTabs v-model="activeTab" :items="items" />
+        <UPageCard v-for="(project, index) in filteredProjects" :key="index" :title="project.title"
             :description="project.description" :to="project.link" orientation="horizontal" variant="naked"
             :reverse="index % 2 === 1" target="_blank" class="group" :ui="{
                 container: 'md:flex md:flex-row lg:flex lg:flex-row gap-x-12',

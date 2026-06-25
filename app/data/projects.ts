@@ -14,6 +14,7 @@ export const projects = [
         github: 'https://github.com/samfrick/porfolio_salome-frick.git',
         image: '/images/app-recettes.png',
         featured: true,
+        category: 'dev'
     },
     {
         title: 'Application de recettes',
@@ -25,6 +26,7 @@ export const projects = [
         link: 'https://embed.figma.com/proto/UCZqMThQLRA8FYFvKuZhhF/DI5?page-id=0%3A1&node-id=1-2&viewport=140%2C137%2C1.35&scaling=scale-down&content-scaling=fixed&embed-host=share',
         image: '/images/app-recettes.png',
         featured: false,
+        category: 'ux'
     },
     {
         title: 'Vers un ciel plus vert',
@@ -37,6 +39,7 @@ export const projects = [
         link: 'https://fricks.etu.mmi-unistra.fr/SAE303-site-groupe6/',
         image: '/images/ciel-vert.png',
         featured: true,
+        category: 'dev'
     },
     {
         title: 'L\'Europe sur la défensive',
@@ -51,6 +54,7 @@ export const projects = [
         github: 'https://github.com/lePapeGrisous/CUEJ_nipssy.git',
         image: '/images/europe-defensive.png',
         featured: true,
+        category: 'dev'
     },
     {
         title: 'Refonte du site de la Sig Association',
@@ -61,6 +65,7 @@ export const projects = [
         technologies: ['Figma'],
         link: 'https://embed.figma.com/proto/5hAScV70jQQf9SLKu0Ocsb/SA%C3%89-302?page-id=1%3A4&node-id=278-2218&viewport=1450%2C367%2C0.08&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=278%3A2218&embed-host=share',
         image: '/images/sig-association.png',
-        featured: false
+        featured: false,
+        category: 'ux'
     }
 ]

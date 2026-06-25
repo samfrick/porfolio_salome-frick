@@ -8,4 +8,5 @@ export interface Project {
   github?: string
   image: string
   featured?: boolean
+  category: 'ux' | 'dev' | 'all'
 }
