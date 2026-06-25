@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import type { TimelineItem } from '@nuxt/ui'
+import { about } from '~/data/about'
+
+const featuredAbout = computed(() =>
+    about.filter(item => item.featured)
+)
 
 const aboutMe = 'Motivée, dynamique, curieuse, attentive et étudiante en 3ème année de BUT Métiers du Multimédia et de l\'Internet, à l\'IUT de Haguenau (Bas-Rhin), \
                 je suis actuellement alternante développeuse web front-end chez Logitud Solutions. \
@@ -81,6 +86,18 @@ const itemsJob = ref<TimelineItem[]>([
             <div class="flex flex-col gap-5">
                 <h2 class="text-3xl font-bold">Mes formations</h2>
                 <UTimeline :items="itemsSchool" />
+            </div>
+        </div>
+        <div class="mx-5 lg:mx-40 xl:w-300 xl:mx-auto mt-20">
+            <h2 class="text-3xl font-bold mb-8">
+                Mes centres d'intêret
+            </h2>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div v-for="(item, index) in featuredAbout" :key="index" class="overflow-hidden rounded-xl">
+                    <img :src="item.image" alt=""
+                        class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+                </div>
             </div>
         </div>
     </section>

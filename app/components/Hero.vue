@@ -82,11 +82,12 @@ const linkProjects = ref<ButtonProps[]>([
     <UPageSection :title="sectionAbout.title" :description="sectionAbout.description" :links="linkAbout" :ui="{
         container: 'lg:py-0 mb-20',
     }">
-        <UBlogPosts>
-            <UBlogPost v-for="project in featuredAbout" :key="project.title" :image="project.image" :ui="{
-                body: 'hidden'
-            }" />
-        </UBlogPosts>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div v-for="(item, index) in featuredAbout" :key="index" class="overflow-hidden rounded-xl">
+                <img :src="item.image" alt=""
+                    class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+            </div>
+        </div>
     </UPageSection>
     <UPageSection :title="sectionProjects.title" :description="sectionProjects.description" :links="linkProjects" :ui="{
         container: 'lg:py-0',
