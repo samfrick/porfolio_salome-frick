@@ -20,13 +20,15 @@ const linksHero = ref<ButtonProps[]>([
     {
         label: 'A propos de moi',
         to: '/about',
-        color: 'neutral',
+        color: 'primary',
+        variant: 'outline',
         ui: { base: 'justify-center w-full md:w-1/3 p-5 font-bold uppercase' }
     },
     {
         label: 'Mes projets',
         to: '/projects',
-        color: 'neutral',
+        color: 'primary',
+        variant: 'outline',
         ui: { base: 'justify-center w-full md:w-1/3 p-5 font-bold uppercase' }
     }
 ])
@@ -46,8 +48,9 @@ const linkAbout = ref<ButtonProps[]>([
     {
         label: 'En savoir plus sur moi',
         to: '/about',
-        color: 'primary',
-        ui: { base: 'justify-center w-full md:w-1/3 p-5 font-bold uppercase dark:bg-secondary hover:bg-secondary-hover' }
+        color: 'neutral',
+        variant: 'outline',
+        ui: { base: 'justify-center w-full md:w-1/3 p-5 font-bold uppercase' }
     }
 ])
 
@@ -55,8 +58,9 @@ const linkProjects = ref<ButtonProps[]>([
     {
         label: 'Voir tous mes projets',
         to: '/projects',
-        color: 'primary',
-        ui: { base: 'justify-center w-full md:w-1/3 p-5 font-bold uppercase dark:bg-secondary dark:hover:bg-secondary-hover' }
+        color: 'neutral',
+        variant: 'outline',
+        ui: { base: 'justify-center w-full md:w-1/3 p-5 font-bold uppercase' }
     }
 ])
 </script>
