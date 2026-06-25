@@ -64,7 +64,7 @@ export const projects = [
         link: 'https://www.figma.com/proto/Uxy7qoWBiX1kCNFqXbUemz/CREA3_gr1_FRICK_Salom%C3%A9?node-id=350-205&viewport=216%2C98%2C0.35&t=136RK0sv1ElFd8tS-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=350%3A205&page-id=268%3A258',
         github: 'https://github.com/lePapeGrisous/CUEJ_nipssy.git',
         image: '/images/ferme-humbert.png',
-        featured: true,
+        featured: false,
         category: 'ux'
     },
     {
