@@ -15,12 +15,27 @@ import { projects } from '~/data/projects'
                     {{ new Date(project.date).getFullYear() }}
                 </span>
             </template>
+            <template #title>
+                <div class="flex flex-col gap-1 mb-2">
+                    <span>{{ project.title }}</span>
+                    <div class="flex flex-row gap-1">
+                        <UBadge v-for="tech in project.technologies.slice(0, 3)" :key="tech" size="sm" variant="soft"
+                            class="w-fit flex">
+                            {{ tech }}
+                        </UBadge>
+                    </div>
+                </div>
+            </template>
             <template #footer>
-                <ULink :to="project.link" class="text-sm text-primary flex items-center gap-2">
-                    Voir le projet
-                    <UIcon name="lucide:arrow-right"
-                        class="size-4 text-primary lg:transition-all lg:opacity-0 lg:group-hover:translate-x-1 lg:group-hover:opacity-100" />
-                </ULink>
+                <div class="flex flex-row gap-4">
+                    <UButton v-if="project.github" icon="i-simple-icons-github" color="primary" variant="ghost"
+                        :to="project.github" target="_blank" aria-label="GitHub" class="z-10" />
+                    <ULink :to="project.link" class="text-sm text-primary flex items-center gap-2">
+                        Voir le projet
+                        <UIcon name="lucide:move-up-right"
+                            class="size-4 text-primary lg:transition-all lg:opacity-0 lg:group-hover:translate-x-1 lg:group-hover:opacity-100" />
+                    </ULink>
+                </div>
             </template>
             <img :src="project.image" :alt="project.title"
                 class="object-cover aspect-video h-48 rounded-lg transition-all group-hover:scale-110 group-hover:shadow-xl">

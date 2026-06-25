@@ -1,8 +1,12 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
+@theme {
+    --ui-primary: #5B3D94;
+}
+
 .dark {
-    --ui-primary: #F6E692;
+    --ui-primary: #B5A54A;
     --ui-secondary: #CAD4EC;
     --ui-secondary-hover: #A9B9D1;
 }

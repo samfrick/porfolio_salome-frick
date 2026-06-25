@@ -5,6 +5,7 @@ export interface Project {
   date: string
   technologies: string[]
   link: string
+  github?: string
   image: string
   featured?: boolean
 }
