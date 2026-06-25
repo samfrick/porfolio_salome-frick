@@ -16,7 +16,7 @@ const hero = ref({
     description: 'Découvrez ici mon portfolio, où je partage mes projets et mes expériences en tant que développeuse web et designer UX/UI.',
 })
 
-const links = ref<ButtonProps[]>([
+const linksHero = ref<ButtonProps[]>([
     {
         label: 'A propos de moi',
         to: '/about',
@@ -42,19 +42,23 @@ const sectionProjects = ref({
     description: 'Découvrez ici mes différents projets, réalisés dans le cadre de mes études et de mon alternance. Chacun d\'entre eux reflète mon engagement envers le développement web et l\'UX/UI.',
 })
 
-const linkAbout = ref<ButtonProps>({
-    label: 'En savoir plus sur moi',
-    to: '/about',
-    color: 'primary',
-    ui: { base: 'justify-center w-full md:w-1/3 p-5 font-bold uppercase' }
-})
+const linkAbout = ref<ButtonProps[]>([
+    {
+        label: 'En savoir plus sur moi',
+        to: '/about',
+        color: 'primary',
+        ui: { base: 'justify-center w-full md:w-1/3 p-5 font-bold uppercase dark:bg-secondary hover:bg-secondary-hover' }
+    }
+])
 
-const linkProjects = ref<ButtonProps>({
-    label: 'Voir tous mes projets',
-    to: '/projects',
-    color: 'primary',
-    ui: { base: 'justify-center w-full md:w-1/3 p-5 font-bold uppercase' }
-})
+const linkProjects = ref<ButtonProps[]>([
+    {
+        label: 'Voir tous mes projets',
+        to: '/projects',
+        color: 'primary',
+        ui: { base: 'justify-center w-full md:w-1/3 p-5 font-bold uppercase dark:bg-secondary dark:hover:bg-secondary-hover' }
+    }
+])
 </script>
 
 <template>
@@ -62,7 +66,7 @@ const linkProjects = ref<ButtonProps>({
         class="fixed inset-0 hidden sm:block sm:top-7 md:top-5 lg:top-0 xl:top-3 -z-10 text-center font-black uppercase text-neutral-100 dark:text-neutral-800/50 text-[18vw] leading-none">
         Portfolio
     </p>
-    <UPageHero :title="hero.title" :description="hero.description" :links="links" :ui="{
+    <UPageHero :title="hero.title" :description="hero.description" :links="linksHero" :ui="{
         container: 'items-center lg:flex overflow-hidden lg:py-35',
         wrapper: 'flex flex-col items-start md:items-center',
         header: 'w-full flex flex-col text-left md:text-center items-start md:items-center',
@@ -71,20 +75,18 @@ const linkProjects = ref<ButtonProps>({
         description: 'w-full lg:w-2/3 text-md',
         links: 'w-full flex flex-col sm:flex-row'
     }" />
-    <UPageSection :title="sectionAbout.title" :description="sectionAbout.description" :linkAbout="linkAbout" :ui="{
+    <UPageSection :title="sectionAbout.title" :description="sectionAbout.description" :links="linkAbout" :ui="{
         container: 'lg:py-0 mb-20',
     }">
         <UBlogPosts>
-            <UBlogPost v-for="project in featuredAbout" :key="project.title" :title="project.title"
-                :image="project.image" :ui="{
-                    description: 'text-sm text-muted',
-                }" />
+            <UBlogPost v-for="project in featuredAbout" :key="project.title" :image="project.image" :ui="{
+                body: 'hidden'
+            }" />
         </UBlogPosts>
     </UPageSection>
-    <UPageSection :title="sectionProjects.title" :description="sectionProjects.description" :linkProjects="linkProjects"
-        :ui="{
-            container: 'lg:py-0',
-        }">
+    <UPageSection :title="sectionProjects.title" :description="sectionProjects.description" :links="linkProjects" :ui="{
+        container: 'lg:py-0',
+    }">
         <UBlogPosts>
             <UBlogPost v-for="project in featuredProjects" :key="project.title" :title="project.title"
                 :description="project.shortDescription" :image="project.image" :to="project.link" :ui="{
